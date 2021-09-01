@@ -1,12 +1,14 @@
 install:
-    pip install --upgrade pip &&\
-    pip install -r requirements.txt
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 test:
-    python -m pytest -vv test_flask_api.py
+	#tests go here
 
+format:
+	black main.py
 
 lint:
-    pylint --disable=R,C api.py
+	pylint --disable=R,C main.py
 
 all: install lint test
