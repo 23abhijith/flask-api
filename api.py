@@ -6,6 +6,7 @@ import json
 
 app = Flask(__name__)
 
+# this endpoint gets weather for server location
 
 @app.route("/")
 def weatherForMe():
